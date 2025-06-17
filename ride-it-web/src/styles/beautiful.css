@@ -1,0 +1,130 @@
+:root {
+  --bg: #f5f5f5;
+  --accent: #4f46e5;
+  --accent-light: #6366f1;
+  --text-color: #333;
+  --radius: 0.75rem;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-color);
+}
+
+.neo-container {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.neo-inset {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: inset var(--shadow-sm);
+}
+
+.neo-button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.6em 1.2em;
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.neo-button:hover {
+  background: var(--accent-light);
+}
+
+.neo-button:active {
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.neo-input,
+.neo-textbox,
+.neo-date-picker {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius);
+  padding: 0.5em 1em;
+}
+
+.neo-tabs {
+  display: flex;
+  gap: 1rem;
+}
+
+.neo-tab {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: background 0.2s;
+}
+
+.neo-tab.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.neo-spinner {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 6px solid rgba(0, 0, 0, 0.1);
+  border-top-color: var(--accent);
+  animation: neo-spin 1s linear infinite;
+}
+
+@keyframes neo-spin {
+  to { transform: rotate(360deg); }
+}
+
+.neo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.neo-list li {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.neo-header,
+.neo-footer,
+.neo-sidebar {
+  background: var(--accent);
+  color: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  padding: 1rem;
+}
+
+.neo-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.neo-main {
+  flex: 1;
+}
+
+.neo-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
