@@ -1,9 +1,13 @@
+import { Footer } from './components/Footer';
+import { HeaderNavigation } from './components/HeaderNavigation';
+import { Tabs } from './components/Tabs';
 import { UseHelmet } from './hooks/UseHelmet'
 import { Rides } from './pages/Rides'
 function App() {
   UseHelmet("Ride it");
   return (
     <>
+    <HeaderNavigation />
      <div style={{
       marginLeft: 600,
       marginRight: 600,
@@ -28,8 +32,10 @@ function App() {
       position: 'relative',
       borderRadius: '10px'
     }}>
-     <div>My Rides | Upcoming Rides | Completed Rides | Cancelled Rides</div>
+     <div><Tabs /></div>
     </div>
+
+    <Footer />
     </>
    
   )
