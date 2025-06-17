@@ -10,7 +10,6 @@ export const CommentComponent = () => {
         value={comment}
         onChange={e => setComment(e.target.value)}
       />
-      <button className="neo-button" style={{ marginTop: '1rem' }}>Submit</button>
     </div>
   )
 }
