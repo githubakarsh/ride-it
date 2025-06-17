@@ -1,5 +1,7 @@
+import { UseHelmet } from './hooks/UseHelmet'
 import { Rides } from './pages/Rides'
 function App() {
+  UseHelmet("Ride it");
   return (
     <>
      <div style={{
