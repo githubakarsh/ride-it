@@ -128,3 +128,26 @@ body {
   top: 0;
   z-index: 1000;
 }
+
+/* Accordion component */
+.neo-accordion {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.neo-accordion-item + .neo-accordion-item {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.neo-accordion-header {
+  padding: 1rem;
+  background: #fff;
+  cursor: pointer;
+}
+
+.neo-accordion-content {
+  padding: 1rem;
+  background: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
